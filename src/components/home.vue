@@ -12,7 +12,7 @@ export default {
   name: "HomeFile",
   data() {
     return {
-      chk: [],
+      chk: ["Jay", "Chauhan"],
     };
   },
   methods: {
