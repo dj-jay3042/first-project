@@ -1,30 +1,32 @@
 <template>
-  <h1>Home Component</h1>
-  Sing : <input type="checkbox" name="hobby" value="Sing" v-model="chk" /><br />
-  Dance :
-  <input type="checkbox" name="hobby" value="Dance" v-model="chk" /><br />
-  <button v-on:click="getData()">Get Values</button>
+    <h1>Home Component</h1>
+    <h2>{{ count }}</h2>
 
-  <h3>Select Values : {{ chk }}</h3>
+    <button v-on:click="test()">Increment</button><br>
+    
+    <button v-on:dblclick="test('button2')">Click to see magic!!!</button>
 </template>
 <script>
 export default {
-  name: "HomeFile",
-  data() {
-    return {
-      chk: [],
-    };
-  },
-  methods: {
-    getData() {
-      alert("Email: " + this.email + "\nPassword: " + this.passwd);
+    name: "HomeFile",
+    data() {
+        return {
+            count : 0
+        }
     },
-  },
-};
+    methods: {
+        test() {
+            this.count++;
+        },
+        getConsole() {
+            alert("sjhgcflhguy");
+        }
+    }
+}
 </script>
 
 <style scoped>
-h1 {
-  color: crimson;
+h1{
+    color:crimson;
 }
 </style>
